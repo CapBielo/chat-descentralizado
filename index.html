@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chat de Red de Malla</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/peerjs@1.4.2/dist/peerjs.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Chat de Red de Malla</h1>
+    <img src="images/logo.png" alt="Logo de la aplicación">
+  </header>
+
+  <div id="chat-container">
+    <div id="messages"></div>
+    <form id="message-form">
+      <input type="text" id="message-input" placeholder="Escribe un mensaje...">
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <script src="scripts/network.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="peer.js"></script>
+  <script src="connection.js"></script>
+</body>
+</html>

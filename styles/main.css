@@ -1,0 +1,71 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #f2f2f2;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  img {
+    width: 100px;
+  }
+  
+  #chat-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Estilos para los mensajes del chat */
+  #messages {
+    margin-bottom: 10px;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background-color: #eee;
+    border-radius: 4px;
+  }
+  
+  /* Estilos para el formulario de enviar mensaje */
+  #message-form {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  #message-input {
+    flex: 1;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  #message-form button {
+    padding: 6px 12px;
+    margin-left: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #message-form button:hover {
+    background-color: #45a049;
+  }
+  
+  
