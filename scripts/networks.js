@@ -75,4 +75,68 @@ peer.on('connection', function (conn) {
   });
 });
 
-  
+  // Función para configurar y conectar dispositivos en la red de malla
+function configurarRedDeMalla(esCoordinador) {
+  if (esCoordinador) {
+    // Pasos específicos para el coordinador
+    console.log("Configurando como coordinador...");
+
+    // Iniciar la aplicación y esperar conexiones de otros nodos
+    iniciarAplicacion();
+
+    // Generar identificador único o permitir configuración personalizada
+    const identificador = generarIdentificador();
+
+    // Difundir información de conexión a través de canales de comunicación
+    difundirInformacionConexion(identificador);
+  } else {
+    // Pasos específicos para los participantes
+    console.log("Configurando como participante...");
+
+    // Obtener información de conexión del coordinador (por ejemplo, dirección IP, puerto)
+    const informacionConexion = obtenerInformacionConexion();
+
+    // Ingresar la información de conexión en la aplicación para establecer la conexión
+    establecerConexion(informacionConexion);
+  }
+
+  // Una vez que los dispositivos están conectados en la red de malla,
+  // la comunicación entre los nodos puede comenzar
+  console.log("Conexión establecida en la red de malla. ¡Comienza a chatear!");
+}
+
+// Funciones auxiliares de ejemplo
+function iniciarAplicacion() {
+  console.log("Iniciando la aplicación...");
+  // Lógica para iniciar la aplicación y esperar conexiones
+}
+
+function generarIdentificador() {
+  const identificador = Math.floor(Math.random() * 1000);
+  console.log("Identificador generado: ", identificador);
+  return identificador;
+}
+
+function difundirInformacionConexion(identificador) {
+  console.log("Difundiendo información de conexión para el identificador: ", identificador);
+  // Lógica para difundir información de conexión a través de canales de comunicación
+}
+
+function obtenerInformacionConexion() {
+  const informacionConexion = prompt("Ingresa la información de conexión proporcionada por el coordinador:");
+  console.log("Información de conexión obtenida: ", informacionConexion);
+  return informacionConexion;
+}
+
+function establecerConexion(informacionConexion) {
+  console.log("Estableciendo conexión con el coordinador usando la información: ", informacionConexion);
+  // Lógica para establecer la conexión con el coordinador
+}
+
+// Ejemplo de uso:
+
+// El usuario selecciona si desea ser el coordinador o no
+const esCoordinador = confirm("¿Desea ser el coordinador?");
+
+// Llamada a la función de configuración y conexión en red de malla
+configurarRedDeMalla(esCoordinador);
